@@ -22,13 +22,13 @@
 
         <div class="form-container">
             <p class="sub-intro">subscribe to our<br>mailing list</p>
-            <h3 id="close-form">X</h3>
+            <h3 id="close-form" onclick="toggler()">X</h3>
 
             <form class="form">
                 <label for="name" >enter your name:</label>
                 <input type="text" placeholder="name" id="name"/>
                 <label for="email">enter your email:</label>
-                <input type="text" placeholder="email"/>
+                <input type="text" placeholder="email" id="email"/>
                 <button>sign up</button>
             </form>
         </div>
@@ -40,17 +40,18 @@
         <section>
             <div class="product-card">
                 <img src="./assets/hat.jpeg" alt="hat" class="product-img"/>
-                <button>add to cart</button>
+                <button onclick = 'addToCart()'>add to cart</button>
             </div>
             <div class="product-card">
                 <img src="./assets/backpack.jpeg" alt="backpack" class="product-img"/>
-                <button>add to cart</button>
+                <button onclick = 'addToCart()'>add to cart</button>
             </div>
             <div class="product-card">
                 <img src="./assets/shoe.jpeg" alt="shoe" class="product-img"/>
-                <button>add to cart</button>
+                <button onclick = 'addToCart()'>add to cart</button>
             </div>
         </section>
     </main>
+<script src = "index.js"></script>
 </body>
 </html>
