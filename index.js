@@ -34,26 +34,22 @@ function toggler() {
 function validateForm() {
   console.log(nameInput.value);
   if (!nameInput.value && !emailInput.value) {
+    alert('You must enter a name and email address to subscribe!');
     nameInput.style.cssText = 'border: 2px solid red;';
     emailInput.style.cssText = 'border: 2px solid red;';
-    alert('You must enter a name and email address to subscribe!');
-    return false;
   } else if (!nameInput.value && emailInput.value) {
     nameInput.style.cssText = 'border: 2px solid red;'
     alert('Please enter a name to subscribe!');
-    return false;
   } else if (nameInput.value && !emailInput.value) {
     emailInput.style.cssText = 'border: 2px solid red;';
     alert('You must enter an email address to subscribe!');
-    return false;
   } else {
     emailList.push({name: nameInput, email: emailInput});
-    return true;
   }
 }
 
-form.addEventListener('submit', function (event) {
-  event.preventDefault;
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
   validateForm();
   displayThankYou();
 });
